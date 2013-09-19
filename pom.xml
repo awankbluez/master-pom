@@ -70,7 +70,7 @@
                     <version>3.1</version>
                     <configuration>
                         <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <target>${java.version.source}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <optimize>false</optimize>
                         <debug>true</debug>
@@ -106,7 +106,7 @@
                             </manifest>
                             <manifestEntries>
                                 <X-Compile-Source>${java.version.source}</X-Compile-Source>
-                                <X-Compile-Target>${java.version.target}</X-Compile-Target>
+                                <X-Compile-Target>${java.version.source}</X-Compile-Target>
                             </manifestEntries>
                         </archive>
                     </configuration>
