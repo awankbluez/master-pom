@@ -48,6 +48,7 @@
         <java.version.source>1.7</java.version.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <primefaces.core.version>4.0</primefaces.core.version>
+        <primefaces.extension.core.version>1.0.0</primefaces.extension.core.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
     </properties>
 
@@ -174,6 +175,17 @@
                         </items>
                     </configuration>
                 </plugin>
+                <!--optimize resource-->
+                <plugin>
+                    <groupId>org.primefaces.extensions</groupId>
+                    <artifactId>resources-optimizer-maven-plugin</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <warningLevel>DEFAULT</warningLevel>
+                        <failOnWarning>true</failOnWarning>
+                        <!--<compilationLevel>ADVANCED_OPTIMIZATIONS</compilationLevel>-->
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -284,6 +296,11 @@
                 <groupId>org.primefaces</groupId>
                 <artifactId>primefaces</artifactId>
                 <version>${primefaces.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.primefaces.extensions</groupId>
+                <artifactId>primefaces-extensions</artifactId>
+                <version>${primefaces.extension.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.primefaces.themes</groupId>
